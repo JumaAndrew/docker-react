@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t j/docker-react -f Dockerfile.dev .
+  - docker build -t j/autodeploy -f Dockerfile.dev .
 
 script:
   - docker run j/docker-react npm run test -- --coverage
